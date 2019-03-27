@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             x:Class="NativePlayGround.iOSPickerPage">
+    <ContentPage.Content>
+   <StackLayout Margin="20">
+        <Picker x:Name="picker" Title="Selcione o MVP" ios:Picker.UpdateMode="WhenFinished">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>Bertuzzi</x:String>
+              <x:String>Renato (Bot) Groff</x:String>
+              <x:String>Thiago Adriano</x:String>
+              <x:String>Ericson Fonseca</x:String>
+              <x:String>Milton Camara</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+        <Button Text="Mude o  Picker UpdateMode" Clicked="OnButtonClicked" />
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

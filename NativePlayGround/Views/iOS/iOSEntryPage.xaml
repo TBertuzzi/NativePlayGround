@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+              Title="Entry FontSize e CursorColor"
+             x:Class="NativePlayGround.iOSEntryPage">
+    
+   <StackLayout Margin="20">
+        <Entry x:Name="entry" Placeholder="Escreve um texto para mudar a fonte" FontSize="22"
+               ios:Entry.AdjustsFontSizeToFitWidth="true" ios:Entry.CursorColor="Magenta" />
+        <Button Text="Ajuste o tamanho da fonte" Clicked="OnButtonClicked" />
+    </StackLayout>
+</ContentPage>
