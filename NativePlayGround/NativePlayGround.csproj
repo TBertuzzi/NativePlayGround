@@ -17,9 +17,10 @@
     <Folder Include="Views\iOS\" />
     <Folder Include="Views\Android\" />
     <Folder Include="Views\iOS\Navigation\" />
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Views\iOS\iOSLargeTitlePage.xaml.cs" />
     <Compile Remove="Views\iOS\iOSPickerPage.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -31,7 +32,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\iOSLargeTitlePage.xaml.cs">
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\iOS\iOSLargeTitlePage.xaml.cs">
       <DependentUpon>iOSLargeTitlePage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

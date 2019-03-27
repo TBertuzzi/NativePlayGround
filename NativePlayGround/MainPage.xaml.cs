@@ -123,6 +123,15 @@ namespace NativePlayGround
 
                 MenuPrincipal.Children.Add(btnTitleView);
 
+                var btnListView = new Button
+                {
+                    Text = "ListView Agrupada",
+                };
+
+                btnListView.Clicked += async (sender, e) => await NavigateToPage(typeof(iOSListViewPage));
+
+                MenuPrincipal.Children.Add(btnListView);
+
             }
             else //Logo Mais dicas de Android
             {
