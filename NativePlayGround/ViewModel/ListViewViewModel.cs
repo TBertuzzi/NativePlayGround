@@ -43,6 +43,30 @@ namespace NativePlayGround.ViewModel
             user.Name = "Thiago";
             users.Add(user);
 
+            user = new User();
+            user.Name = "Renato Bot";
+            users.Add(user);
+
+            user = new User();
+            user.Name = "Miltão do camarote";
+            users.Add(user);
+
+            user = new User();
+            user.Name = "Ewerton";
+            users.Add(user);
+
+            user = new User();
+            user.Name = "Ericson";
+            users.Add(user);
+
+            user = new User();
+            user.Name = "Luis";
+            users.Add(user);
+
+            user = new User();
+            user.Name = "Andre secco";
+            users.Add(user);
+
             GroupedUsers = new ObservableCollection<Grouping<char, User>>(users.OrderBy(e => e.Name[0]).GroupBy(e => e.Name[0]).Select(e => new Grouping<char, User>(e.Key, e)));
         }
     }
