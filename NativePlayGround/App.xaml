@@ -1,5 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="NativePlayGround.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+             xmlns:androidAppCompat="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             
+             android:Application.WindowSoftInputModeAdjust="Resize" 
+             androidAppCompat:Application.SendDisappearingEventOnPause="false" 
+             androidAppCompat:Application.SendAppearingEventOnResume="false" 
+             androidAppCompat:Application.ShouldPreserveKeyboardOnResume="false"
+             ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true"
+             
+             x:Class="NativePlayGround.App">
+    
+     <!-- É possivel adicionar para renderizar controles na Thread Principal do ios:
+            
+            ios:Application.HandleControlUpdatesOnMainThread="true"
+    
+        Raramente precisamos disso, mas pode evitar alguns crashs :) . -->
+    
     <Application.Resources>
     </Application.Resources>
 </Application>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Ajustar Teclado"
+             x:Class="NativePlayGround.Views.Android.AndroidSoftInputModeAdjustPage">
+    <!-- Application.WindowSoftInputModeAdjust é inicializado no App.xaml -->
+
+   <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Pan" Clicked="OnPanButtonClicked" />
+            <Button Text="Resize" Clicked="OnResizeButtonClicked" />
+        </StackLayout>
+        <Entry Placeholder="Digite seu texto aqui" VerticalOptions="EndAndExpand" />
+    </StackLayout>
+    
+</ContentPage>

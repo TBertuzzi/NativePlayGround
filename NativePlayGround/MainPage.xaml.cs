@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using NativePlayGround.Views;
+using NativePlayGround.Views.Android;
 using Xamarin.Forms;
 
 namespace NativePlayGround
@@ -135,7 +136,88 @@ namespace NativePlayGround
             }
             else //Logo Mais dicas de Android
             {
-               
+                var btnShadow = new Button
+                {
+                    Text = "Sombra no botão",
+                };
+
+                btnShadow.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidButtonPage));
+
+                MenuPrincipal.Children.Add(btnShadow);
+
+                var btnElevation = new Button
+                {
+                    Text = "Elevação",
+                };
+
+                btnElevation.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidElevationPage));
+
+                MenuPrincipal.Children.Add(btnElevation);
+
+                var btnInput = new Button
+                {
+                    Text = "Opções de Entrada no Teclado",
+                };
+
+                btnInput.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidEntryPage));
+
+                MenuPrincipal.Children.Add(btnInput);
+
+                var btnImageShadow = new Button
+                {
+                    Text = "ImageButton Com Sombra",
+                };
+
+                btnImageShadow.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidImageButtonPage));
+
+                MenuPrincipal.Children.Add(btnImageShadow);
+
+                var btnPause = new Button
+                {
+                    Text = "Pause e Retorne o ciclo de vida do APP",
+                };
+
+                btnPause.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidLifecycleEventsPage));
+
+                MenuPrincipal.Children.Add(btnPause);
+
+                var btnFastScroll = new Button
+                {
+                    Text = "Habilitar FastScroll no ListView",
+                };
+
+                btnFastScroll.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidListViewFastScrollPage));
+
+                MenuPrincipal.Children.Add(btnFastScroll);
+
+                var btnTitleView = new Button
+                {
+                    Text = "Android TitleView",
+                };
+
+                btnTitleView.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidTitleViewPage));
+
+                MenuPrincipal.Children.Add(btnTitleView);
+
+                var btnTeclado = new Button
+                {
+                    Text = "Ajuste Teclado",
+                };
+
+                btnTeclado.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidSoftInputModeAdjustPage));
+
+                MenuPrincipal.Children.Add(btnTeclado);
+
+                var btnTabbar = new Button
+                {
+                    Text = "Opções de TabbedPage",
+                };
+
+                btnTabbar.Clicked += async (sender, e) => await NavigateToPage(typeof(AndroidTabbedPageSwipePage));
+
+                MenuPrincipal.Children.Add(btnTabbar);
+
+
             }
         }
 
@@ -154,10 +236,10 @@ namespace NativePlayGround
                 {
                     page = new iOSTitleViewNavigationPage(page);
                 }
-                //else if (page is AndroidTitleViewPage)
-                //{
-                //    page = new AndroidNavigationPage(page);
-                //}
+                else if (page is AndroidTitleViewPage)
+                {
+                    page = new AndroidNavigationPage(page);
+                }
                 SetRoot(page);
             }
             else

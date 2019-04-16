@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Pause/Resume Os Eventos do Android (Ciclo de vida)"
+             x:Class="NativePlayGround.Views.Android.AndroidLifecycleEventsPage">
+        <!-- Existe uma COnfiguração que é necessaria, Application.SendDisappearingEventOnPause, Application.SendAppearingEventOnResume,
+    and Application.ShouldPreserveKeyboardOnResume são incializados no App.xaml -->
+    
+   <StackLayout Margin="20">
+        <Label Text="Pause o aplicativo (ciclo de vida) ou retorne. Caso você pause o ciclo de vida do app os eventos OnAppearing e OnDisappearing sobrescritos não serão acionados." HorizontalOptions="Center" />
+        <Entry Placeholder="Digite um texto" />
+        <Button Text="Pause/Resume o ciclo de vida" Clicked="OnButtonClicked" />
+    </StackLayout>
+</ContentPage>
